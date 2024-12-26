@@ -1,43 +1,74 @@
+.torna-su {
+  position: fixed;
+  bottom: 20px; /* Distanza dal basso */
+  right: 20px;  /* Distanza da destra */
+  z-index: 1000; /* Mantiene l'immagine sopra gli altri contenuti */
+  cursor: pointer; /* Cambia il cursore quando si passa sopra */
+  width: 50px; /* Imposta una dimensione standard per l'icona */
+  height: 50px;
+}
+
 .contenitore {
-    display: flex;
-    justify-content: space-between; /* Spaziatura tra articolo e aside */
-  }
-  
-  article {
-    width: 60%; /* L'articolo occupa il 60% della larghezza */
-  }
-  
-  aside {
-    width: 35%; /* L'aside occupa il 35% della larghezza */
-    background-color: #ffeb3b; /* Colore di sfondo giallo */
-    padding: 10px; /* Padding per migliorare l'aspetto */
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  width: 60%;
+}
+
+aside {
+  width: 35%;
+  background-color: #ffeb3b;
+  padding: 10px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #575757;
+}
+
+@media (max-width: 768px) {
+  /* Riduzione dimensioni logo e link */
+  nav a {
+    font-size: 14px; /* Riduci la dimensione del testo dei link */
+    padding: 8px 15px; /* Riduci il padding dei link */
   }
 
-  
-  nav {
-    background-color: #333; /* Colore di sfondo della navbar */
-    padding: 10px;
+  .contenitore {
+    flex-direction: column; /* I contenuti si dispongono uno sotto l'altro */
+    align-items: center; /* Centra gli elementi */
   }
-  
-  nav ul {
-    display: flex; /* Allinea gli elementi <li> orizzontalmente */
-    justify-content: space-around; /* Spazio uniforme tra gli elementi */
-    padding: 0;
-    margin: 0;
-    list-style: none; /* Rimuove i pallini della lista */
+
+  article, aside {
+    width: 100%; /* Gli elementi occupano tutta la larghezza disponibile */
+    margin-bottom: 20px; /* Distanza tra l'articolo e l'aside */
   }
-  
-  nav ul li {
-    display: block; /* Ogni voce è un blocco */
+
+  .torna-su {
+    width: 40px; /* Riduce la dimensione del bottone "torna su" su schermi piccoli */
+    height: 40px;
   }
-  
-  nav a {
-    color: white; /* Colore del testo dei link */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    padding: 10px 20px;
-  }
-  
-  nav a:hover {
-    background-color: #575757; /* Colore di sfondo al passaggio del mouse */
-  }
-  
+}
