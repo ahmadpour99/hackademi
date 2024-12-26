@@ -1,0 +1,43 @@
+.contenitore {
+    display: flex;
+    justify-content: space-between; /* Spaziatura tra articolo e aside */
+  }
+  
+  article {
+    width: 60%; /* L'articolo occupa il 60% della larghezza */
+  }
+  
+  aside {
+    width: 35%; /* L'aside occupa il 35% della larghezza */
+    background-color: #ffeb3b; /* Colore di sfondo giallo */
+    padding: 10px; /* Padding per migliorare l'aspetto */
+  }
+
+  
+  nav {
+    background-color: #333; /* Colore di sfondo della navbar */
+    padding: 10px;
+  }
+  
+  nav ul {
+    display: flex; /* Allinea gli elementi <li> orizzontalmente */
+    justify-content: space-around; /* Spazio uniforme tra gli elementi */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Rimuove i pallini della lista */
+  }
+  
+  nav ul li {
+    display: block; /* Ogni voce è un blocco */
+  }
+  
+  nav a {
+    color: white; /* Colore del testo dei link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    padding: 10px 20px;
+  }
+  
+  nav a:hover {
+    background-color: #575757; /* Colore di sfondo al passaggio del mouse */
+  }
+  
